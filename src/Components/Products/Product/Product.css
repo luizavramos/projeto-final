@@ -1,0 +1,34 @@
+.product .photo{
+    width: 35vh;
+}
+.product .title{
+    width:35vh;
+    font-size: 3vh;
+    
+    margin-top: 0%;
+}
+.product .description{
+    width:35vh;
+    font-size: 3vh;
+    margin-top:-10%;
+}
+
+.product .price{
+    width:35vh;
+    font-size: 3vh;
+    
+}
+
+.Product .product {   
+    padding: 1vh;
+    margin: 1vh;
+  }
+  
+  .Product .product:hover {
+    border: 1px solid rgb(197, 197, 197);
+    cursor: pointer;
+  }
+  
+  .Product .selected {
+    border: 10px solid rgb(197, 197, 197);
+  }

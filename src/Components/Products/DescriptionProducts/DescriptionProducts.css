@@ -1,0 +1,11 @@
+.quantidade{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
+
+.button-qtde{
+    display: flex;
+    flex-direction: column;
+}

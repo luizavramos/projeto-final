@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import CartContext from "./Contexts/CartContext";
+import Home from "./Pages/Home/Index";
+import DescriptionProduct from "./Components/Products/DescriptionProducts/Index";
+import { useState } from "react";
+import Navbar from "./Components/Navbar/Index";
+import CheckoutPage from "./Pages/CheckoutPage/Index";
+import Hoteis from "./Components/Category/Hoteis/Index";
+import Passagens from "./Components/Category/Passagens/Index";
+import Pacotes from "./Components/Category/Pacotes/Index";
 
 function App() {
+  const [cart, setCart] = useState([]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CartContext.Provider value={{ cart, setCart }}>
+        <div className="App">
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/hoteis" element={<Hoteis />} />
+              <Route path="/passagens" element={<Passagens />} />
+              <Route path="/pacotes" element={<Pacotes />} />
+              <Route
+                path="/products/:productsId"
+                element={<DescriptionProduct />}
+              />
+              <Route path="/checkout" element={<CheckoutPage />} />
+
+            </Routes>
+          </BrowserRouter>
+        </div>
+      </CartContext.Provider>
+    </>
   );
 }
 

@@ -1,0 +1,283 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Eurotrip",
+      "photo": "https://i.imgur.com/oMYHKov.png",
+      "price": 1999,
+      "description": "Eurotrip com aéreo pela companhia x + hotel categoria standard + city tour",
+      "pieces": 2,
+      "category": "Pacotes"
+    },
+    {
+      "id": 2,
+      "name": "Portugal",
+      "photo": "https://i.imgur.com/V0gsibE.png",
+      "price": 2590,
+      "description": "Portugal com aéreo pela companhia x + hotel categoria standard + city tour",
+      "pieces": 3,
+      "category": "Pacotes"
+    },
+    {
+      "id": 3,
+      "name": "Maceió",
+      "photo": "https://i.imgur.com/N9wjJsk.png",
+      "price": 990,
+      "description": "Maceió com aéreo pela companhia x + hotel categoria standard + city tour",
+      "pieces": 3,
+      "category": "Pacotes"
+    },
+    {
+      "id": 4,
+      "name": "Suiça",
+      "photo": "https://i.imgur.com/9Y6zaSg.png",
+      "price": 2590,
+      "description": "Suiça com aéreo pela companhia x + hotel categoria standard + city tour",
+      "pieces": 5,
+      "category": "Pacotes"
+    },
+    {
+      "id": 5,
+      "name": "Grécia",
+      "photo": "https://i.imgur.com/8JqyQIv.png",
+      "price": 1000,
+      "description": "Grécia com aéreo pela companhia x + hotel categoria standard + city tour",
+      "pieces": 2,
+      "category": "Pacotes"
+    },
+    {
+      "id": 6,
+      "name": "Londres",
+      "photo": "https://i.imgur.com/cbTWT0z.png",
+      "price": 1999,
+      "description": "Londres com aéreo pela companhia x + hotel categoria standard + city tour",
+      "pieces": 1,
+      "category": "Pacotes"
+    },
+    {
+      "id": 7,
+      "name": "França",
+      "photo": "https://i.imgur.com/q0uO2s7.png",
+      "price": 1290,
+      "description": "França com aéreo pela companhia x + hotel categoria standard + city tour",
+      "pieces": 4,
+      "category": "Pacotes"
+    },
+    {
+      "id": 8,
+      "name": "Índia",
+      "photo": "https://i.imgur.com/LzfWGf5.png",
+      "price": 2790,
+      "description": "Índia com aéreo pela companhia x + hotel categoria standard + city tour",
+      "pieces": 2,
+      "category": "Pacotes"
+    },
+    {
+      "id": 9,
+      "name": "Japão",
+      "photo": "https://i.imgur.com/T74Wa2r.png",
+      "price": 3590,
+      "description": "Japão com aéreo pela companhia x + hotel categoria standard + city tour",
+      "pieces": 1,
+      "category": "Pacotes"
+    },
+    {
+      "id": 10,
+      "name": "Peru",
+      "photo": "https://i.imgur.com/VnTduBW.png",
+      "price": 2590,
+      "description": "Peru com aéreo pela companhia x + hotel categoria standard + city tour",
+      "pieces": 1,
+      "category": "Pacotes"
+    },
+    {
+      "id": 11,
+      "name": "Hotel na Turquia",
+      "photo": "https://i.imgur.com/kN9HMx6.png",
+      "price": 599,
+      "description": "Diária em hotel 5 estrelas na Turquia ",
+      "pieces": 1,
+      "category": "Hoteis"
+    },
+    {
+      "id": 12,
+      "name": "Hotel em Portugal",
+      "photo": "https://i.imgur.com/qWQq53H.png",
+      "price": 355,
+      "description": "Diária em hotel 5 estrelas em Portugal",
+      "pieces": 1,
+      "category": "Hoteis"
+    },
+    {
+      "id": 13,
+      "name": "Hotel em Maceió",
+      "photo": "https://i.imgur.com/vLrtTcb.png",
+      "price": 499,
+      "description": "Diária em hotel 5 estrelas em Maceió",
+      "pieces": 1,
+      "category": "Hoteis"
+    },
+    {
+      "id": 14,
+      "name": "Hotel na Suíça",
+      "photo": "https://i.imgur.com/3sRXhbe.png",
+      "price": 599,
+      "description": "Diária em hotel 5 estrelas na Suíça",
+      "pieces": 1,
+      "category": "Hoteis"
+    },
+    {
+      "id": 15,
+      "name": "Hotel na Grécia",
+      "photo": "https://i.imgur.com/v1NjICf.png",
+      "price": 299,
+      "description": "Diária em hotel 5 estrelas na Grécia",
+      "pieces": 1,
+      "category": "Hoteis"
+    },
+    {
+      "id": 16,
+      "name": "Hotel em Londres",
+      "photo": "https://i.imgur.com/fk5XQwR.png",
+      "price": 399,
+      "description": "Diária em hotel 5 estrelas em Londres",
+      "pieces": 1,
+      "category": "Hoteis"
+    },
+    {
+      "id": 17,
+      "name": "Hotel na França",
+      "photo": "https://i.imgur.com/etyLIdp.png",
+      "price": 399,
+      "description": "Diária em hotel 5 estrelas na França",
+      "pieces": 1,
+      "category": "Hoteis"
+    },
+    {
+      "id": 18,
+      "name": "Hotel na Índia",
+      "photo": "https://i.imgur.com/VxkCiEf.png",
+      "price": 399,
+      "description": "Diária em hotel 5 estrelas na Índia",
+      "pieces": 2,
+      "category": "Hoteis"
+    },
+    {
+      "id": 19,
+      "name": "Hotel no Japão",
+      "photo": "https://i.imgur.com/EDMQWSo.png",
+      "price": 199,
+      "description": "Diária em hotel 5 estrelas no Japão",
+      "pieces": 1,
+      "category": "Hoteis"
+    },
+    {
+      "id": 20,
+      "name": "Hotel no Peru",
+      "photo": "https://i.imgur.com/2bHzW4C.png",
+      "price": 299,
+      "description": "Diária em hotel 5 estrelas no Peru",
+      "pieces": 1,
+      "category": "Hoteis"
+    },
+    {
+      "id": 21,
+      "name": "Aéreo Turquia",
+      "photo": "https://i.imgur.com/Hpq6xdU.png",
+      "price": 1299,
+      "description": "Aéreo para a Turquia com a companhia Aérea X",
+      "pieces": 1,
+      "category": "Passagens"
+    },
+    {
+      "id": 22,
+      "name": "Aéreo Portugal",
+      "photo": "https://i.imgur.com/XIzaL8r.png",
+      "price": 999,
+      "description": "Aéreo para Portugal com a companhia Aérea X",
+      "pieces": 2,
+      "category": "Passagens"
+    },
+    {
+      "id": 23,
+      "name": "Aéreo Maceió",
+      "photo": "https://i.imgur.com/uYsfJ99.png",
+      "price": 499,
+      "description": "Aéreo para Maceió com a companhia Aérea X",
+      "pieces": 1,
+      "category": "Passagens"
+    },
+    {
+      "id": 24,
+      "name": "Aéreo Suíça",
+      "photo": "https://i.imgur.com/nbbKAr8.png",
+      "price": 2299,
+      "description": "Aéreo para a Suíça com a companhia Aérea X",
+      "pieces": 1,
+      "category": "Passagens"
+    },
+    {
+      "id": 25,
+      "name": "Aéreo Grécia",
+      "photo": "https://i.imgur.com/dazpVGE.png",
+      "price": 1599,
+      "description": "Aéreo para a Grécia com a companhia Aérea X",
+      "pieces": 1,
+      "category": "Passagens"
+    },
+    {
+      "id": 26,
+      "name": "Aéreo Londres",
+      "photo": "https://i.imgur.com/AGi3K8T.png",
+      "price": 1799,
+      "description": "Aéreo para Londres com a companhia Aérea X",
+      "pieces": 1,
+      "category": "Passagens"
+    },
+    {
+      "id": 27,
+      "name": "Aéreo França",
+      "photo": "https://i.imgur.com/Wcnjx37.png",
+      "price": 1899,
+      "description": "Aéreo para a França com a companhia Aérea X",
+      "pieces": 1,
+      "category": "Passagens"
+    },
+    {
+      "id": 28,
+      "name": "Aéreo Índia",
+      "photo": "https://i.imgur.com/McJiCII.png",
+      "price": 3299,
+      "description": "Aéreo para a Índia com a companhia Aérea X",
+      "pieces": 1,
+      "category": "Passagens"
+    },
+    {
+      "id": 29,
+      "name": "Aéreo Japão",
+      "photo": "https://i.imgur.com/BaFPqKY.png",
+      "price": 3599,
+      "description": "Aéreo para o Japão com a companhia Aérea X",
+      "pieces": 1,
+      "category": "Passagens"
+    },
+    {
+      "id": 30,
+      "name": "Aéreo Peru",
+      "photo": "https://i.imgur.com/Q3nZPEt.png",
+      "price": 1299,
+      "description": "Aéreo para o Peru com a companhia Aérea X",
+      "pieces": 1,
+      "category": "Passagens"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": " ",
+      "CEP": "",
+      "email": "",
+      "birth-date": "1/1/82"
+    }
+  ]
+}
