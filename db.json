@@ -6,7 +6,7 @@
       "photo": "https://i.imgur.com/oMYHKov.png",
       "price": 1999,
       "description": "Eurotrip com aéreo pela companhia x + hotel categoria standard + city tour",
-      "pieces": 2,
+      "pieces": "07",
       "category": "Pacotes"
     },
     {
@@ -15,7 +15,7 @@
       "photo": "https://i.imgur.com/V0gsibE.png",
       "price": 2590,
       "description": "Portugal com aéreo pela companhia x + hotel categoria standard + city tour",
-      "pieces": 3,
+      "pieces": 0,
       "category": "Pacotes"
     },
     {
@@ -24,7 +24,7 @@
       "photo": "https://i.imgur.com/N9wjJsk.png",
       "price": 990,
       "description": "Maceió com aéreo pela companhia x + hotel categoria standard + city tour",
-      "pieces": 3,
+      "pieces": "3",
       "category": "Pacotes"
     },
     {
@@ -33,7 +33,7 @@
       "photo": "https://i.imgur.com/9Y6zaSg.png",
       "price": 2590,
       "description": "Suiça com aéreo pela companhia x + hotel categoria standard + city tour",
-      "pieces": 5,
+      "pieces": "48",
       "category": "Pacotes"
     },
     {
@@ -42,7 +42,7 @@
       "photo": "https://i.imgur.com/8JqyQIv.png",
       "price": 1000,
       "description": "Grécia com aéreo pela companhia x + hotel categoria standard + city tour",
-      "pieces": 2,
+      "pieces": 3,
       "category": "Pacotes"
     },
     {
@@ -60,7 +60,7 @@
       "photo": "https://i.imgur.com/q0uO2s7.png",
       "price": 1290,
       "description": "França com aéreo pela companhia x + hotel categoria standard + city tour",
-      "pieces": 4,
+      "pieces": "25",
       "category": "Pacotes"
     },
     {
@@ -69,7 +69,7 @@
       "photo": "https://i.imgur.com/LzfWGf5.png",
       "price": 2790,
       "description": "Índia com aéreo pela companhia x + hotel categoria standard + city tour",
-      "pieces": 2,
+      "pieces": "",
       "category": "Pacotes"
     },
     {
@@ -78,7 +78,7 @@
       "photo": "https://i.imgur.com/T74Wa2r.png",
       "price": 3590,
       "description": "Japão com aéreo pela companhia x + hotel categoria standard + city tour",
-      "pieces": 1,
+      "pieces": "099",
       "category": "Pacotes"
     },
     {
@@ -105,7 +105,7 @@
       "photo": "https://i.imgur.com/qWQq53H.png",
       "price": 355,
       "description": "Diária em hotel 5 estrelas em Portugal",
-      "pieces": 1,
+      "pieces": "25",
       "category": "Hoteis"
     },
     {
@@ -114,7 +114,7 @@
       "photo": "https://i.imgur.com/vLrtTcb.png",
       "price": 499,
       "description": "Diária em hotel 5 estrelas em Maceió",
-      "pieces": 1,
+      "pieces": 0,
       "category": "Hoteis"
     },
     {
@@ -150,7 +150,7 @@
       "photo": "https://i.imgur.com/etyLIdp.png",
       "price": 399,
       "description": "Diária em hotel 5 estrelas na França",
-      "pieces": 1,
+      "pieces": "5",
       "category": "Hoteis"
     },
     {
@@ -168,7 +168,7 @@
       "photo": "https://i.imgur.com/EDMQWSo.png",
       "price": 199,
       "description": "Diária em hotel 5 estrelas no Japão",
-      "pieces": 1,
+      "pieces": "07",
       "category": "Hoteis"
     },
     {
@@ -204,7 +204,7 @@
       "photo": "https://i.imgur.com/uYsfJ99.png",
       "price": 499,
       "description": "Aéreo para Maceió com a companhia Aérea X",
-      "pieces": 1,
+      "pieces": "78",
       "category": "Passagens"
     },
     {

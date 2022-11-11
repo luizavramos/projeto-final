@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Await } from "react-router-dom";
 import CartContext from "../../../Contexts/CartContext";
 import ProductDetail from "../ProductsDetails/Index";
 import "./DescriptionProducts.css"
@@ -26,45 +26,34 @@ function DescriptionProduct() {
    
   }, []); 
 
- function addProductOnCart() {
+function addProductOnCart() {
     if (isProductAlreadySelected()) {
       const newProductList = removeProductFromCart();
       setCart(newProductList);
       navigate("/");
     } else {
-       
+
       setCart([...cart, products]);
       navigate("/checkout");
     }
   }
 
-  function salvarQuantidade(){  
+  async function salvarQuantidade(){  
+      
       const url = process.env.REACT_APP_BACKEND_URI;
       const res = axios.patch(`${url}/products/${params.productsId}`, {
         pieces: piece ,
-      })
-      
-      productUpdate();
+      })   
  
   }
-  function productUpdate(){
+ async function productUpdate(){
     const url = process.env.REACT_APP_BACKEND_URI;
       const promise = axios.get(`${url}/products/${params.productsId}`);
       promise.then((response) => setProducts(response.data));
       promise.catch((error) => console.log("error", error));  
    
   }
-
-  
-  function Somar(){
-    setPiece(piece + 1)    
-    
-
-  }
-  function Subtrair(){
-    setPiece(piece - 1)
-  }
-
+ 
   console.log(isEdit)
   function removeProductFromCart() {
     return cart.filter((productOnCart) => products.id !== productOnCart.id);
@@ -86,26 +75,21 @@ function DescriptionProduct() {
       ) : (
         <div>Não há nada para exibir</div>
       )}
-      <div className="quantidade">
-      <h4>Quantidade: {piece}</h4><div className="button-qtde">
-      <button onClick={Somar}>+</button>
-      <button onClick={Subtrair}>-</button>
-      <button onClick={salvarQuantidade}>save</button>
-      </div>
-      </div>
-      <div className="actions">      
-    
-        
+      
+      <form onChange={salvarQuantidade} onSubmit={salvarQuantidade}>
+      <label htmlFor="piece">Quantidade: </label>
+      <input name="piece" type="number" value={piece} onChange={(e) => setPiece(e.target.value)}></input>
+      
         <button onClick={handleBack}>Voltar</button>
-        <button onClick={addProductOnCart}>
+        <button onClick={addProductOnCart} type="submit">
           {products && !isProductAlreadySelected() ? (
             <>Selecionar</>
           ) : (
             <>Remover</>
           )}
-        </button>
+        </button></form> 
       </div>
-    </div>
+    
   );
 }
 export default DescriptionProduct;
