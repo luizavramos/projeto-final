@@ -44,6 +44,11 @@ export default function CheckoutPage() {
     );
   }
 
+  const handleReset = () => {
+    Array.from(document.querySelectorAll("input")).forEach(
+      input => (input.value = "")
+    );
+    }
   return (
     <div className="CheckOutPage">
       <div>
@@ -122,7 +127,9 @@ export default function CheckoutPage() {
               Estado:<br></br>
               <input type="text" {...register("uf")} />
             </label>
-            <button type="submit">Enviar</button>
+            
+            <button type="submit" onClick={handleReset}>Enviar</button>
+            
           </form>
         </div>
       </div>
