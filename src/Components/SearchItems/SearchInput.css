@@ -1,0 +1,33 @@
+.Div-search{
+    background-color: rgb(5, 92, 222);
+    height: 8vh;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: flex-start;
+    
+}
+
+
+  
+  .float-label input {  
+    border-radius: 4vh;
+    background: #fff;
+    justify-content: center;
+    margin-right: 20vh;
+    width: 30vh;
+    height: 3vh;
+    border-color: #fff;
+    font-family: 'Poppins';
+    font-weight: 300;
+    
+  }
+
+  .float-label label img{
+    height: 2.5vh;
+    width: 2.5vh;
+    justify-content: center;
+    margin-right: 1vh;
+    margin-top: 0.1vh;
+  }

@@ -42,7 +42,7 @@ function Hoteis() {
   const products = buildProductsList();
   return (<>
   <div className="title-page">
-    <h2>Aqui você pode encontrar todos os hotéis</h2>
+    <h2>Aqui você pode encontrar todos os nossos Hotéis</h2>
   </div>
     <div className="Products-list">
       {products}

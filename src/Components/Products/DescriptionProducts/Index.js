@@ -1,95 +1,76 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
-import { useParams, useNavigate, Await } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import CartContext from "../../../Contexts/CartContext";
 import ProductDetail from "../ProductsDetails/Index";
 import "./DescriptionProducts.css"
 
 function DescriptionProduct() {
+  const [product, setProduct] = useState(null);
+  const { cart, setCart } = useContext(CartContext);
+  const [quantity, setQuantity] = useState(1);
+
   const params = useParams();
   const navigate = useNavigate();
-  const [products, setProducts] = useState(null);
-  const { cart, setCart } = useContext(CartContext);
-  const [piece, setPiece] = useState(0);
-  const [isEdit, setIsEdit] = useState(false);
 
-  function handleBack() {
-    navigate("/");
-  }
-  console.log(params);
-  
   useEffect(() => {
-      const url = process.env.REACT_APP_BACKEND_URI;
-      const promise = axios.get(`${url}/products/${params.productsId}`);
-      promise.then((response) => setProducts(response.data));
-      promise.catch((error) => console.log("error", error));  
-   
-  }, []); 
-
-function addProductOnCart() {
-    if (isProductAlreadySelected()) {
-      const newProductList = removeProductFromCart();
-      setCart(newProductList);
-      navigate("/");
-    } else {
-
-      setCart([...cart, products]);
-      navigate("/checkout");
-    }
-  }
-
-  async function salvarQuantidade(){  
-      
-      const url = process.env.REACT_APP_BACKEND_URI;
-      const res = axios.patch(`${url}/products/${params.productsId}`, {
-        pieces: piece ,
-      })   
- 
-  }
- async function productUpdate(){
     const url = process.env.REACT_APP_BACKEND_URI;
-      const promise = axios.get(`${url}/products/${params.productsId}`);
-      promise.then((response) => setProducts(response.data));
-      promise.catch((error) => console.log("error", error));  
-   
-  }
- 
-  console.log(isEdit)
-  function removeProductFromCart() {
-    return cart.filter((productOnCart) => products.id !== productOnCart.id);
-  }
+    const promise = axios.get(`${url}/products/${params.productsId}`);
+    promise.then((response) => setProduct(response.data));
+    promise.catch((error) => console.log("error", error));
+  }, []);
 
-  function isProductAlreadySelected() {
-    return cart.find((productOnCart) => products.id === productOnCart.id);
+  function addProductOnCart() {
+    const { indexOfProduct } = getProductFromCart();
+    if (indexOfProduct >= 0) {
+      const productToUpdate = cart[indexOfProduct];
+      console.log("productToUpdate - b", productToUpdate)
+      productToUpdate.quantity += parseInt(quantity);
+      console.log("productToUpdate - a", productToUpdate)
+      setCart([...cart, { product, quantity }]);
+    } else {
+      setCart([...cart, { product, quantity }]);
+
+    }
+    navigate("/checkout");
+  }
+   
+  // {product, quantity}
+  function getProductFromCart() {
+    let indexOfProduct = -1; // does not exists
+    const productOrder = cart.find((productOnCart, index) => {
+      indexOfProduct = index;
+      return product.id === productOnCart.product.id
+    });
+
+    return { productOrder, indexOfProduct };
   }
 
   return (
     <div>
-      {products ? (
+      {product ? (
         <ProductDetail
-          name={products.name}
-          photo={products.photo}
-          price={products.price}
-          description={products.description}
+          name={product.name}
+          photo={product.photo}
+          price={product.price}
+          description={product.description}
         />
       ) : (
         <div>Não há nada para exibir</div>
       )}
-      
-      <form onChange={salvarQuantidade} onSubmit={salvarQuantidade}>
-      <label htmlFor="piece">Quantidade: </label>
-      <input name="piece" type="number" value={piece} onChange={(e) => setPiece(e.target.value)}></input>
-      
-        <button onClick={handleBack}>Voltar</button>
-        <button onClick={addProductOnCart} type="submit">
-          {products && !isProductAlreadySelected() ? (
-            <>Selecionar</>
-          ) : (
-            <>Remover</>
-          )}
-        </button></form> 
+      <div className="quantidade">
+        <div>
+          <label htmlFor="quantity">Quantidade: </label>
+          <input id="quantity" onChange={(e) => setQuantity(parseInt(e.target.value))} value={quantity} type="number" min={1} />
+        </div>
       </div>
-    
+      <div className="actions">
+
+
+        <button onClick={() => navigate("/")}>Voltar</button>
+        <button onClick={addProductOnCart}>Selecionar</button>
+      </div>
+    </div>
   );
 }
 export default DescriptionProduct;

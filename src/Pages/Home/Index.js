@@ -3,19 +3,18 @@ import ListProducts from "../../Components/Products/ListProducts/Index";
 import Carrinho from "../../Components/Carrinho/Index";
 import ShoppingContext from "../../Contexts/CartContext";
 import { useContext } from "react";
+
+import "./Home.css"
+import ProductsSearch from "../../Components/Products/ProductsSearch/Index";
+
 function Home(){
 
-    const { cart } = useContext(ShoppingContext);
-
-    function getTotalFromProducts() {
-      return cart.reduce((acc, current) => {
-        return acc += current.price;
-      }, 0)
-    }
-
     return(<>
+
         
         <Carousel/>
+         <ProductsSearch/>
+        <h1>Melhores Ofertas</h1> 
         <ListProducts/>
         
         </>

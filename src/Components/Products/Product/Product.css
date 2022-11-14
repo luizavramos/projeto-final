@@ -4,18 +4,21 @@
 .product .title{
     width:35vh;
     font-size: 3vh;
-    
+    font-family: 'Poppins';
+    font-weight: 300;
     margin-top: 0%;
 }
 .product .description{
     width:35vh;
     font-size: 3vh;
     margin-top:-10%;
+    font-family: 'Poppins';
 }
 
 .product .price{
     width:35vh;
     font-size: 3vh;
+    font-family: 'Poppins';
     
 }
 
@@ -27,6 +30,7 @@
   .Product .product:hover {
     border: 1px solid rgb(197, 197, 197);
     cursor: pointer;
+    transform: scale(1.1);
   }
   
   .Product .selected {

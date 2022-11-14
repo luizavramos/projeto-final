@@ -9,9 +9,11 @@ import CheckoutPage from "./Pages/CheckoutPage/Index";
 import Hoteis from "./Components/Category/Hoteis/Index";
 import Passagens from "./Components/Category/Passagens/Index";
 import Pacotes from "./Components/Category/Pacotes/Index";
+import ProductsSearch from "./Components/Products/ProductsSearch/Index";
 
 function App() {
   const [cart, setCart] = useState([]);
+
   return (
     <>
       <CartContext.Provider value={{ cart, setCart }}>
@@ -27,6 +29,7 @@ function App() {
                 path="/products/:productsId"
                 element={<DescriptionProduct />}
               />
+              <Route path="/productSearch" element={<ProductsSearch/>}/>
               <Route path="/checkout" element={<CheckoutPage />} />
 
             </Routes>
